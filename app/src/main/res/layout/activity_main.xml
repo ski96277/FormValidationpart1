@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.imransk.formvalidationpart1.MainActivity">
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8sp"
+        android:text="Input Validation by Using Floating label"/>
+<android.support.design.widget.TextInputLayout
+    android:id="@+id/linearlayoutFullname"
+    android:layout_width="match_parent"
+    android:layout_below="@id/textview1"
+    android:layout_height="wrap_content"
+    app:errorTextAppearance="@style/error_appearance">
+
+    <EditText
+        android:id="@+id/username"
+        android:hint="User Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"/>
+
+</android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/linearlayoutpassword"
+        android:layout_below="@id/linearlayoutFullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/userpassword"
+            android:hint="User Password"
+            android:layout_below="@id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:inputType="textPassword"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearlayoutpassword"
+        android:layout_marginTop="17dp"
+        android:text="Login"
+        android:onClick="Login"
+        android:textAllCaps="false"/>
+</RelativeLayout>
